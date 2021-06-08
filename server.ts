@@ -1,11 +1,11 @@
 import express from 'express';;
-import {Application} from 'express';
+import { Application } from 'express';
 import chalk from 'chalk';
 
-import {getAllCourses, getCourseById} from './src/routes/get-courses.route';
-import {searchLessons} from "./src/routes/search-lessons.route";
-import {saveCourse} from './src/routes/save-course.route';
-import { getExtraData } from './src/routes/get-extra.route';
+import { getAllCourses, getCourseById } from './src/routes/get-courses.route';
+import { searchLessons } from "./src/routes/search-lessons.route";
+import { saveCourse } from './src/routes/save-course.route';
+import { getOldApi, getnewApi, postOldApi } from './src/routes/get-extra.route';
 
 
 const app: Application = express();
@@ -35,7 +35,13 @@ app.route('/api/v1/lessons').get(searchLessons);
 
 app.route('/api/v1/courses/:id').put(saveCourse);
 
-app.route('/api/v1/extra').get(getExtraData);
+app.route('/api/v1/oldapi').get(getOldApi);
+
+app.route('/api/v1/newapi').get(getnewApi);
+
+app.route('/api/v1/oldapi').post(postOldApi);
+
+app.route('/api/v1/newapi').post(getnewApi);
 
 // A default route
 app.get('/api/v1', (req, res) => {

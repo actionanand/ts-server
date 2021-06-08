@@ -1,3 +1,7 @@
-export const COURSES: any = {
+export const OLDAPI: any = {
+    
+};
+
+export const NEWAPI: any = {
     
 };
