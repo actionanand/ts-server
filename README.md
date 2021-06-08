@@ -76,3 +76,23 @@ ETag: W/"30-wCFITczWLjOV7yt7leOshObdFG4"
 Date: Tue, 08 Jun 2021 14:39:54 GMT
 Connection: keep-alive
 ```
+
+## How to Add All Files to a Git Commit Except Some?
+
+You can use any command to add all files you wish to stage (like git add . for example), followed by git reset to unstage the ones you want to exclude: 
+
+```ignore
+git add .
+
+# excluding file:
+git reset -- path/to/file.txt
+
+# excluding folder:
+git reset -- path/to/folder/*
+```
+
+For this repo, Please add the following command after staging all the files to exclude the file `db-data-extra.ts`
+
+```git
+git reset -- src/db/db-data-extra.ts
+```

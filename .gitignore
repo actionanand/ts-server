@@ -47,3 +47,12 @@ Thumbs.db
 
 # Specific to this ts-server
 # src/db/db-data-extra.ts
+
+# How to exclude only certain files from staging
+# git add .
+
+# excluding file:
+# git reset -- path/to/file.txt
+
+# excluding folder:
+# git reset -- path/to/folder/*
