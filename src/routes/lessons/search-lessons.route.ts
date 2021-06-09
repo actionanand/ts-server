@@ -1,6 +1,6 @@
-import {Request, Response} from 'express';
-import {LESSONS} from '../db/db-data';
-import {setTimeout} from "timers";
+import { Request, Response } from 'express';
+import { LESSONS } from '../../db/db-data';
+import { setTimeout } from "timers";
 
 
 
@@ -20,7 +20,7 @@ export function searchLessons(req: Request, res: Response) {
        lessons = lessons.filter(lesson => lesson.description.trim().toLowerCase().search(filter.toLowerCase()) >= 0);
     }
 
-    if (sortOrder == "desc") {
+    if (sortOrder == 'desc') {
         lessons = lessons.reverse();
     }
 

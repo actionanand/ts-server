@@ -61,19 +61,19 @@ Please try to run the following cURL command simulation in your terminal:
 curl -H "Origin: http://localhost:3000" --head http://localhost:5201/api/v1
 
 ```
-If you check the response, you'll notice that there is now an `Access-Control-Allow-Origin` header with the origin `*`. This means that when you run your client-side app on any IP(not only from `http://localhost:3000`) , the app will be able to retrieve resources from your server.
+If you check the response, you'll notice that there is now an `Access-Control-Allow-Origin` header with the origin `http://localhost:3000`. This means that when you run your client-side app on `http://localhost:3000` , the app will be able to retrieve resources from your server.
 
 ```bash
 HTTP/1.1 200 OK
 X-Powered-By: Express
+Access-Control-Allow-Origin: http://localhost:3000
 Vary: Origin
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept
-Access-Control-Allow-Methods: OPTIONS, GET, POST, PUT, DELETE
+server: Ts-Server
+Author: Anand Raja
 Content-Type: application/json; charset=utf-8
 Content-Length: 48
 ETag: W/"30-wCFITczWLjOV7yt7leOshObdFG4"
-Date: Tue, 08 Jun 2021 14:39:54 GMT
+Date: Wed, 09 Jun 2021 15:05:10 GMT
 Connection: keep-alive
 ```
 

@@ -1,47 +1,93 @@
 import express from 'express';;
 import { Application } from 'express';
+import cors from 'cors';
 import chalk from 'chalk';
 
-import { getAllCourses, getCourseById } from './src/routes/get-courses.route';
-import { searchLessons } from "./src/routes/search-lessons.route";
-import { saveCourse } from './src/routes/save-course.route';
-import { getOldApi, getnewApi, postOldApi } from './src/routes/get-extra.route';
+import { getAllCourses, getCourseById } from './src/routes/courses/get-courses.route';
+import { searchLessons } from "./src/routes/lessons/search-lessons.route";
+import { saveCourse } from './src/routes/courses/save-course.route';
+import { getOldApi, getNewApi } from './src/routes/extra/get-extra.route';
+import { postOldApi, postNewApi } from './src/routes/extra/post-extra.route';
 
 
 const app: Application = express();
 const port = process.env.PORT || 5201;
+const whitelist = ['http://localhost:3000', 'http://localhost:5201'];
+
+
+// Print the request info
+app.use((req, res, next) => {
+    console.log(chalk `IP : {magenta ${req.ip}} , Origin : {yellow ${req.header('Origin')}} , 
+    Method : {red ${req.method}} , URL : {green ${req.url}}`);
+    next();
+});
+
+// Allow proxy at frontend to bypass  CORS
+const corsOptionsDelegate = function (req, callback) {
+  let corsOptions: { origin: boolean };
+  if (whitelist.indexOf(req.header('Origin')) !== -1) {
+    corsOptions = { origin: true } // reflect (enable) the requested origin in the CORS response
+  } else {
+    corsOptions = { origin: false } // disable CORS for this request
+  }
+  callback(null, corsOptions) // callback expects two parameters: error and options
+}
+
+app.use(cors(corsOptionsDelegate));
+
+
+
+// Don't allow proxy at frontend to bypass
+// const corsOriginOptions = {
+//     origin: function (origin, callback) {
+//       if (whitelist.indexOf(origin) !== -1 || !origin) {
+//         callback(null, true)
+//       } else {
+//         callback(new Error('Not allowed by CORS of Ts-server'));
+//       }
+//     }
+//   }
+
+//   app.use(cors(corsOriginOptions));
+
+
+
+//  To allow all the origin from frontend side
+// app.use(cors({
+//     origin: '*'
+//   }));
+
 
 app.use(express.json());
 
-// Allow any method from any host and log requests
 app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-    res.header('Access-Control-Allow-Methods', 'OPTIONS, GET, POST, PUT, DELETE');
-    if('OPTIONS' === req.method) {
-        res.sendStatus(200);
-    } else {
-        console.log(chalk `IP : {magenta ${req.ip}} , Method : {red ${req.method}} , URL : {green ${req.url}}`);
-        next();
-    }
-});
+    res.set({
+        'server': 'Ts-Server',
+        'Author': 'Anand Raja'
+    });
+    next();
+})
 
 
+//courses APIs
 app.route('/api/v1/courses').get(getAllCourses);
 
 app.route('/api/v1/courses/:id').get(getCourseById);
 
-app.route('/api/v1/lessons').get(searchLessons);
-
 app.route('/api/v1/courses/:id').put(saveCourse);
 
-app.route('/api/v1/oldapi').get(getOldApi);
+//lessons APIs
+app.route('/api/v1/lessons').get(searchLessons);
 
-app.route('/api/v1/newapi').get(getnewApi);
+//Old APIs
+app.route('/api/v1/oldapi').get(getOldApi);
 
 app.route('/api/v1/oldapi').post(postOldApi);
 
-app.route('/api/v1/newapi').post(getnewApi);
+//New APIs
+app.route('/api/v1/newapi').get(getNewApi);
+
+app.route('/api/v1/newapi').post(postNewApi);
 
 // A default route
 app.get('/api/v1', (req, res) => {
