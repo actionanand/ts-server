@@ -17,8 +17,7 @@ const whitelist = ['http://localhost:3000', 'http://localhost:5201'];
 
 // Print the request info
 app.use((req, res, next) => {
-    console.log(chalk `IP : {magenta ${req.ip}} , Origin : {yellow ${req.header('Origin')}} , 
-    Method : {red ${req.method}} , URL : {green ${req.url}}`);
+    console.log(chalk `IP : {magenta ${req.ip}} , Origin : {yellow ${req.header('Origin')}} , Method : {red ${req.method}} , URL : {green ${req.url}}`);
     next();
 });
 
