@@ -58,7 +58,7 @@ By using `concurrently`, whenever we run `npm serve` we'll get both the backend 
 Please try to run the following cURL command simulation in your terminal:
 
 ```bash
-curl -H "Origin: http://localhost:3000" --head http://localhost:5201/api/v1
+curl -H "Origin: http://localhost:3000" --head http://localhost:5201/api/v1/your-name
 
 ```
 If you check the response, you'll notice that there is now an `Access-Control-Allow-Origin` header with the origin `http://localhost:3000`. This means that when you run your client-side app on `http://localhost:3000` , the app will be able to retrieve resources from your server.

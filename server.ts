@@ -5,8 +5,7 @@ import chalk from 'chalk';
 import { addResponseMetaData } from './src/utils/response-metadata';
 import { incomingReqInfo } from './src/utils/console-helper-texts';
 import { corsOptionsDelegateOption } from './src/utils/cors-support';
-
-const allRegisteredRoutes = require('./src/routes/routes');
+import { allRegisteredRoutes } from './src/routes/routes';
 
 const app: Application = express();
 const port = process.env.PORT || 5201;
@@ -27,7 +26,11 @@ app.use(allRegisteredRoutes);
 
 // A default route
 app.get('/api/v1', (req, res) => {
-    res.send({message: 'Hello world!, This is REST API v1.'});
+    res.send({
+        'message': 'Hello world!',
+        'api': 'Currently API v1 is only supported, API v2 will be released soon.',
+        'usage': 'To mock api for frontend like Angular'
+    });
 });
 
 
