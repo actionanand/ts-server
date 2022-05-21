@@ -96,3 +96,16 @@ For this repo, Please add the following command after staging all the files to e
 ```git
 git reset -- src/db/db-data-extra.ts
 ```
+
+## Cloning Guide
+
+### clone only the remote primary HEAD (default: origin/master)
+```bash
+git clone <url> --single-branch
+```
+
+### Only specific branch
+
+```bash
+git clone <url> --branch <branch> --single-branch [<folder>]
+```
