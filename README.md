@@ -110,6 +110,17 @@ git clone <url> --single-branch
 git clone <url> --branch <branch> --single-branch [<folder>]
 ```
 
+```bash
+git clone <url> --branch <branch> 
+```
+
+### Cloning repositories using degit
+
+```bash
+npx degit github:user/repo#branch-name <folder-name>
+```
+- master branch is default.
+
 ## Terminal and Commands 
 
 * [Linux - I am Love with Terminal](https://dev.to/imabtiwari/linux-i-am-love-with-terminal-2n7p)
@@ -120,3 +131,7 @@ git clone <url> --branch <branch> --single-branch [<folder>]
 * [Bash cheat sheet: Top 25 commands and creating custom commands](https://www.educative.io/blog/bash-shell-command-cheat-sheet)
 * [Getting Started with Vim Editor in Linux](https://www.geeksforgeeks.org/getting-started-with-vim-editor-in-linux/)
 * [Linux vim command](https://www.computerhope.com/unix/vim.htm)
+
+## Other resources
+
+* [Replacement for git clone - degit](https://dev.to/vuelancer/replacement-for-git-clone-degit-3lf1)
