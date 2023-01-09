@@ -6,6 +6,7 @@ import { searchLessons } from './lessons/search-lessons.route';
 import { getOldApi, getNewApi } from './extra/get-extra.route';
 import { postOldApi, postNewApi } from './extra/post-extra.route';
 import { getGeneralRoutev1 } from './general/get-general.route';
+import { getPdfStatic } from './pdfs/pdf.routes';
 
 const router = express.Router();
 
@@ -29,10 +30,11 @@ router.route('/api/v1/newapi').get(getNewApi);
 
 router.route('/api/v1/newapi').post(postNewApi);
 
+// PDF APIs
+router.route('/api/v1/static/pdf/local').get(getPdfStatic);
+
 //General APIs
 router.route('/api/v1/:name').get(getGeneralRoutev1);
 router.route('/api/v2/:name').get(getGeneralRoutev1);
-
-// PDF APIs
 
 export { router as allRegisteredRoutes };
