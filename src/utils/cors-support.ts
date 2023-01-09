@@ -7,14 +7,12 @@ const whitelist = ['http://localhost:3000', 'http://localhost:5201'];
 const corsOptionsDelegate = (req: Request, callback) => {
   let corsOptions: { origin: boolean };
   if (whitelist.indexOf(req.header('Origin')) !== -1) {
-    corsOptions = { origin: true }; 
+    corsOptions = { origin: true };
   } else {
     corsOptions = { origin: false };
   }
-  callback(null, corsOptions) // callback expects two parameters: error and options
-}
-
-
+  callback(null, corsOptions); // callback expects two parameters: error and options
+};
 
 // Don't allow proxy at frontend to bypass CORS
 // const corsOptionsDelegate = {
@@ -26,7 +24,6 @@ const corsOptionsDelegate = (req: Request, callback) => {
 //       }
 //     }
 //   }
-
 
 // To allow whitelisted domains only from frontend side
 export const corsOptionsDelegateOption = cors(corsOptionsDelegate);

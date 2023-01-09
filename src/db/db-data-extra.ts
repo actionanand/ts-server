@@ -1,7 +1,3 @@
-export const OLDAPI: any = {
-    
-};
+export const OLDAPI: any = {};
 
-export const NEWAPI: any = {
-    
-};
+export const NEWAPI: any = {};

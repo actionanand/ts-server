@@ -33,5 +33,6 @@ router.route('/api/v1/newapi').post(postNewApi);
 router.route('/api/v1/:name').get(getGeneralRoutev1);
 router.route('/api/v2/:name').get(getGeneralRoutev1);
 
+// PDF APIs
 
 export { router as allRegisteredRoutes };
