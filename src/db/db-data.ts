@@ -3,11 +3,9 @@ export const COURSES: any = {
     id: 12,
     titles: {
       description: 'Angular Testing Course',
-      longDescription:
-        'In-depth guide to Unit Testing and E2E Testing of Angular Applications',
+      longDescription: 'In-depth guide to Unit Testing and E2E Testing of Angular Applications',
     },
-    iconUrl:
-      'https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-testing-small.png',
+    iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-testing-small.png',
     category: 'BEGINNER',
     seqNo: 0,
     url: 'angular-testing',
@@ -18,11 +16,9 @@ export const COURSES: any = {
     id: 2,
     titles: {
       description: 'Angular Core Deep Dive',
-      longDescription:
-        'A detailed walk-through of the most important part of Angular - the Core and Common modules',
+      longDescription: 'A detailed walk-through of the most important part of Angular - the Core and Common modules',
     },
-    iconUrl:
-      'https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-core-in-depth-small.png',
+    iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-core-in-depth-small.png',
     lessonsCount: 10,
     category: 'BEGINNER',
     seqNo: 1,
@@ -33,13 +29,10 @@ export const COURSES: any = {
     id: 3,
     titles: {
       description: 'RxJs In Practice Course',
-      longDescription:
-        'Understand the RxJs Observable pattern, learn the RxJs Operators via practical examples',
+      longDescription: 'Understand the RxJs Observable pattern, learn the RxJs Operators via practical examples',
     },
-    iconUrl:
-      'https://s3-us-west-1.amazonaws.com/angular-university/course-images/rxjs-in-practice-course.png',
-    courseListIcon:
-      'https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png',
+    iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/rxjs-in-practice-course.png',
+    courseListIcon: 'https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png',
     category: 'BEGINNER',
     lessonsCount: 10,
     seqNo: 2,
@@ -53,10 +46,8 @@ export const COURSES: any = {
       longDescription:
         'Learn the modern Ngrx Ecosystem, including Store, Effects, Router Store, Ngrx Entity, Dev Tools and Schematics.',
     },
-    iconUrl:
-      'https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-ngrx-course.png',
-    courseListIcon:
-      'https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png',
+    iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-ngrx-course.png',
+    courseListIcon: 'https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png',
     category: 'BEGINNER',
     lessonsCount: 10,
     seqNo: 3,
@@ -70,8 +61,7 @@ export const COURSES: any = {
       longDescription:
         'Serveless Angular with Firestore, Firebase Storage & Hosting, Firebase Cloud Functions & AngularFire',
     },
-    iconUrl:
-      'https://s3-us-west-1.amazonaws.com/angular-university/course-images/serverless-angular-small.png',
+    iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/serverless-angular-small.png',
     lessonsCount: 10,
     category: 'BEGINNER',
     seqNo: 4,
@@ -82,13 +72,10 @@ export const COURSES: any = {
     id: 5,
     titles: {
       description: 'Angular for Beginners',
-      longDescription:
-        "Establish a solid layer of fundamentals, learn what's under the hood of Angular",
+      longDescription: "Establish a solid layer of fundamentals, learn what's under the hood of Angular",
     },
-    iconUrl:
-      'https://angular-academy.s3.amazonaws.com/thumbnails/angular2-for-beginners-small-v2.png',
-    courseListIcon:
-      'https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png',
+    iconUrl: 'https://angular-academy.s3.amazonaws.com/thumbnails/angular2-for-beginners-small-v2.png',
+    courseListIcon: 'https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png',
     category: 'BEGINNER',
     lessonsCount: 10,
     seqNo: 5,
@@ -102,10 +89,8 @@ export const COURSES: any = {
       longDescription:
         'Learn Web Security Fundamentals and apply them to defend an Angular / Node Application from multiple types of attacks.',
     },
-    iconUrl:
-      'https://s3-us-west-1.amazonaws.com/angular-university/course-images/security-cover-small-v2.png',
-    courseListIcon:
-      'https://s3-us-west-1.amazonaws.com/angular-university/course-images/lock-v2.png',
+    iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/security-cover-small-v2.png',
+    courseListIcon: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/lock-v2.png',
     category: 'ADVANCED',
     lessonsCount: 11,
     seqNo: 6,
@@ -116,13 +101,10 @@ export const COURSES: any = {
     id: 7,
     titles: {
       description: 'Angular PWA - Progressive Web Apps Course',
-      longDescription:
-        'Learn Angular Progressive Web Applications, build the future of the Web Today.',
+      longDescription: 'Learn Angular Progressive Web Applications, build the future of the Web Today.',
     },
-    iconUrl:
-      'https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-pwa-course.png',
-    courseListIcon:
-      'https://s3-us-west-1.amazonaws.com/angular-university/course-images/alien.png',
+    iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-pwa-course.png',
+    courseListIcon: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/alien.png',
     category: 'ADVANCED',
     lessonsCount: 8,
     seqNo: 7,
@@ -132,15 +114,12 @@ export const COURSES: any = {
   8: {
     id: 8,
     titles: {
-      description:
-        'Angular Advanced Library Laboratory: Build Your Own Library',
+      description: 'Angular Advanced Library Laboratory: Build Your Own Library',
       longDescription:
         'Learn Advanced Angular functionality typically used in Library Development. Advanced Components, Directives, Testing, Npm',
     },
-    iconUrl:
-      'https://angular-academy.s3.amazonaws.com/thumbnails/advanced_angular-small-v3.png',
-    courseListIcon:
-      'https://angular-academy.s3.amazonaws.com/thumbnails/angular-advanced-lesson-icon.png',
+    iconUrl: 'https://angular-academy.s3.amazonaws.com/thumbnails/advanced_angular-small-v3.png',
+    courseListIcon: 'https://angular-academy.s3.amazonaws.com/thumbnails/angular-advanced-lesson-icon.png',
     category: 'ADVANCED',
     seqNo: 8,
     url: 'angular-advanced-course',
@@ -153,10 +132,8 @@ export const COURSES: any = {
       longDescription:
         'Complete Guide to Typescript From Scratch: Learn the language in-depth and use it to build a Node REST API.',
     },
-    iconUrl:
-      'https://angular-academy.s3.amazonaws.com/thumbnails/typescript-2-small.png',
-    courseListIcon:
-      'https://angular-academy.s3.amazonaws.com/thumbnails/typescript-2-lesson.png',
+    iconUrl: 'https://angular-academy.s3.amazonaws.com/thumbnails/typescript-2-small.png',
+    courseListIcon: 'https://angular-academy.s3.amazonaws.com/thumbnails/typescript-2-lesson.png',
     category: 'BEGINNER',
     seqNo: 9,
     url: 'typescript-course',
@@ -169,10 +146,8 @@ export const COURSES: any = {
       longDescription:
         'Learn the core RxJs Observable Pattern as well and many other Design Patterns for building Reactive Angular Applications.',
     },
-    iconUrl:
-      'https://s3-us-west-1.amazonaws.com/angular-academy/blog/images/rxjs-reactive-patterns-small.png',
-    courseListIcon:
-      'https://angular-academy.s3.amazonaws.com/course-logos/observables_rxjs.png',
+    iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-academy/blog/images/rxjs-reactive-patterns-small.png',
+    courseListIcon: 'https://angular-academy.s3.amazonaws.com/course-logos/observables_rxjs.png',
     category: 'BEGINNER',
     seqNo: 10,
     url: 'rxjs-patterns-course',
@@ -182,11 +157,9 @@ export const COURSES: any = {
     id: 11,
     titles: {
       description: 'Angular Material Course',
-      longDescription:
-        'Build Applications with the official Angular Widget Library',
+      longDescription: 'Build Applications with the official Angular Widget Library',
     },
-    iconUrl:
-      'https://s3-us-west-1.amazonaws.com/angular-university/course-images/material_design.png',
+    iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/material_design.png',
     category: 'BEGINNER',
     seqNo: 11,
     url: 'angular-material-course',
@@ -196,8 +169,7 @@ export const COURSES: any = {
 export const LESSONS = {
   1: {
     id: 1,
-    description:
-      'Angular Tutorial For Beginners - Build Your First App - Hello World Step By Step',
+    description: 'Angular Tutorial For Beginners - Build Your First App - Hello World Step By Step',
     duration: '4:17',
     seqNo: 1,
     courseId: 5,
@@ -253,16 +225,14 @@ export const LESSONS = {
   },
   9: {
     id: 9,
-    description:
-      ' Components Tutorial For Beginners - Components Exercise Solution Inside',
+    description: ' Components Tutorial For Beginners - Components Exercise Solution Inside',
     duration: '2:08',
     seqNo: 9,
     courseId: 5,
   },
   10: {
     id: 10,
-    description:
-      ' Directives - Inputs, Output Event Emitters and How To Export Template References',
+    description: ' Directives - Inputs, Output Event Emitters and How To Export Template References',
     duration: '4:01',
     seqNo: 10,
     courseId: 5,
@@ -287,8 +257,7 @@ export const LESSONS = {
 
   13: {
     id: 13,
-    description:
-      'Installing The Lessons Code - Learn Why Its Essential To Use NPM 5',
+    description: 'Installing The Lessons Code - Learn Why Its Essential To Use NPM 5',
     duration: '06:05',
     seqNo: 3,
     courseId: 6,
@@ -325,8 +294,7 @@ export const LESSONS = {
   },
   18: {
     id: 18,
-    description:
-      'The New Angular HTTP Client - Doing a POST Call To The Server',
+    description: 'The New Angular HTTP Client - Doing a POST Call To The Server',
     duration: '06:08',
     seqNo: 8,
     courseId: 6,
@@ -347,8 +315,7 @@ export const LESSONS = {
   },
   21: {
     id: 21,
-    description:
-      'Some Interesting Properties Of Hashing Functions - Validating Passwords',
+    description: 'Some Interesting Properties Of Hashing Functions - Validating Passwords',
     duration: '06:31',
     seqNo: 11,
     courseId: 6,
@@ -358,8 +325,7 @@ export const LESSONS = {
 
   22: {
     id: 22,
-    description:
-      'Course Kick-Off - Install Node, NPM, IDE And Service Workers Section Code',
+    description: 'Course Kick-Off - Install Node, NPM, IDE And Service Workers Section Code',
     duration: '07:19',
     seqNo: 1,
     courseId: 7,
@@ -373,16 +339,14 @@ export const LESSONS = {
   },
   24: {
     id: 24,
-    description:
-      'Service Workers Hello World - Lifecycle Part 1 and PWA Chrome Dev Tools',
+    description: 'Service Workers Hello World - Lifecycle Part 1 and PWA Chrome Dev Tools',
     duration: '7:28',
     seqNo: 3,
     courseId: 7,
   },
   25: {
     id: 25,
-    description:
-      'Service Workers and Application Versioning - Install & Activate Lifecycle Phases',
+    description: 'Service Workers and Application Versioning - Install & Activate Lifecycle Phases',
     duration: '10:17',
     seqNo: 4,
     courseId: 7,
@@ -390,8 +354,7 @@ export const LESSONS = {
 
   26: {
     id: 26,
-    description:
-      'Downloading The Offline Page - The Service Worker Installation Phase',
+    description: 'Downloading The Offline Page - The Service Worker Installation Phase',
     duration: '09:50',
     seqNo: 5,
     courseId: 7,

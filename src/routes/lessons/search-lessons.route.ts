@@ -16,11 +16,7 @@ export function searchLessons(req: Request, res: Response) {
     .sort((l1, l2) => l1.id - l2.id);
 
   if (filter) {
-    lessons = lessons.filter(
-      (lesson) =>
-        lesson.description.trim().toLowerCase().search(filter.toLowerCase()) >=
-        0,
-    );
+    lessons = lessons.filter((lesson) => lesson.description.trim().toLowerCase().search(filter.toLowerCase()) >= 0);
   }
 
   if (sortOrder == 'desc') {
